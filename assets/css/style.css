@@ -1,4 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Uncial+Antiqua&display=swap');
 
+body { 
+    font-family: "Open Sans", sans-serif;
+}
 /* index.html */
 .landing-page {
     height: 100vh;
@@ -7,9 +11,7 @@
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    display: flex;
-    align-items: center;
-    justify-content: center; */
+    justify-content: center; 
 }
 
 .opaque-overlay {
@@ -18,9 +20,26 @@
     left: 0;
     height: 100%;
     width: 100%;
-    background-color: rgba(0,0,0,0.3);
+    background-color: rgba(0,0,0,0.1);
 }
 
+.page-title {
+    margin-top: 20px;
+    font-family: "Uncial Antiqua", serif;
+    color:#067906;
+    font-weight: bold;
+}
+
+.subtitle {
+    font-family: "Uncail Antiqua", serif;
+    color:#067906;
+    font-weight: bold;
+}
+
+.instructions,
+.start-game {
+    z-index: 1;
+}
 
 /* game.html */
 .game {
@@ -37,8 +56,8 @@
 
 .card {
     position: relative;
-    height: 140px;
-    width: 100px;
+    height: 150px;
+    width: 110px;
 }  
 
 .card-front,
@@ -50,13 +69,23 @@
   justify-content: center;
   align-items: center;
   backface-visibility: hidden;
+  border-radius: 5px;
 }
 
-@media screen and (max-width: 600px) {
-    .memory-game-container {
+.card-back {
+    border: 2px solid lime;   
+}
+
+.card-front {
+    border: 2px solid purple;
+}
+
+
+@media screen and (max-width: 660px) {
+    .game-container {
         grid-template-columns: repeat(4, auto);
     }
-    .memory-card {
+    .card {
         height: 100px;
         width: 80px;
     }
